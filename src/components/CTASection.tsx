@@ -16,6 +16,7 @@ const CTASection = () => {
         
         <p className="text-lg text-muted-foreground mb-8">
           Connect with mentors, attend events, and grow your professional network.
+          Access your personalized alumni profile and dashboard.
         </p>
         
         <Button 

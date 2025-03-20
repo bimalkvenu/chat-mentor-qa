@@ -4,11 +4,12 @@ import NavigationBar from '@/components/NavigationBar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { GraduationCap, Users, MessageCircle, Calendar, Bell, Briefcase, BookOpen } from 'lucide-react';
+import { GraduationCap, Users, MessageCircle, Calendar, Bell, Briefcase, BookOpen, User } from 'lucide-react';
 import AlumniDashboard from '@/components/alumni/AlumniDashboard';
 import AlumniEvents from '@/components/alumni/AlumniEvents';
 import AlumniConnections from '@/components/alumni/AlumniConnections';
 import AlumniMentorship from '@/components/alumni/AlumniMentorship';
+import { Link } from 'react-router-dom';
 
 const AlumniPortal = () => {
   // Scroll to top on page load
@@ -38,6 +39,16 @@ const AlumniPortal = () => {
                 <Button className="flex items-center gap-2 button-transition button-hover focus-ring">
                   <MessageCircle className="h-4 w-4" />
                   <span className="hidden sm:inline">Messages</span>
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="flex items-center gap-2 focus-ring"
+                  asChild
+                >
+                  <Link to="/alumni-profile">
+                    <User className="h-4 w-4" />
+                    <span className="hidden sm:inline">My Profile</span>
+                  </Link>
                 </Button>
               </div>
             </div>
