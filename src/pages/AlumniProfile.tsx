@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import NavigationBar from '@/components/NavigationBar';
 import Footer from '@/components/Footer';
@@ -27,7 +26,6 @@ import { Link } from 'react-router-dom';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
 const AlumniProfile = () => {
-  // Scroll to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -38,9 +36,7 @@ const AlumniProfile = () => {
       
       <main className="flex-grow pt-24 pb-12">
         <div className="container mx-auto px-4 md:px-6">
-          {/* Profile Header */}
           <div className="mb-8 relative">
-            {/* Banner Image */}
             <div className="h-48 rounded-xl overflow-hidden mb-16">
               <img 
                 src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070&auto=format&fit=crop" 
@@ -49,7 +45,6 @@ const AlumniProfile = () => {
               />
             </div>
             
-            {/* Profile Avatar + Basic Info */}
             <div className="absolute left-8 bottom-0 transform translate-y-1/2 flex flex-col sm:flex-row items-start sm:items-end gap-6">
               <div className="relative">
                 <img 
@@ -81,7 +76,6 @@ const AlumniProfile = () => {
               </div>
             </div>
             
-            {/* Action Buttons */}
             <div className="flex justify-end gap-3 mt-4">
               <Button 
                 variant="outline" 
@@ -109,11 +103,8 @@ const AlumniProfile = () => {
             </div>
           </div>
           
-          {/* Profile Content */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Left Sidebar */}
             <div className="lg:col-span-1 space-y-6">
-              {/* Contact Information */}
               <Card className="p-6 glass-card">
                 <h3 className="text-lg font-semibold mb-4">Contact Information</h3>
                 <div className="space-y-3">
@@ -161,7 +152,6 @@ const AlumniProfile = () => {
                 </div>
               </Card>
               
-              {/* Skills & Expertise */}
               <Card className="p-6 glass-card">
                 <h3 className="text-lg font-semibold mb-4">Skills & Expertise</h3>
                 <div className="flex flex-wrap gap-2">
@@ -180,7 +170,6 @@ const AlumniProfile = () => {
                 </Button>
               </Card>
               
-              {/* Badges & Achievements */}
               <Card className="p-6 glass-card">
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   <Award className="h-5 w-5 text-primary" />
@@ -220,9 +209,7 @@ const AlumniProfile = () => {
               </Card>
             </div>
             
-            {/* Main Content Area */}
             <div className="lg:col-span-2 space-y-6">
-              {/* Bio */}
               <Card className="p-6 glass-card">
                 <h3 className="text-lg font-semibold mb-4">About Me</h3>
                 <p className="text-muted-foreground">
@@ -236,7 +223,6 @@ const AlumniProfile = () => {
                 </p>
               </Card>
               
-              {/* Education & Experience Tabs */}
               <Tabs defaultValue="education" className="w-full">
                 <TabsList className="w-full mb-6 grid grid-cols-2 h-auto bg-muted/50 p-1 rounded-lg">
                   <TabsTrigger value="education" className="py-2 data-[state=active]:bg-white flex items-center gap-2">
@@ -320,7 +306,6 @@ const AlumniProfile = () => {
                 </TabsContent>
               </Tabs>
               
-              {/* Mentorship & Activities */}
               <Card className="p-6 glass-card">
                 <h3 className="text-lg font-semibold mb-4">Mentorship & Activities</h3>
                 
@@ -391,7 +376,6 @@ const AlumniProfile = () => {
                 </div>
               </Card>
               
-              {/* Profile Completion Progress */}
               <Card className="p-6 glass-card">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                   <div>
