@@ -20,7 +20,8 @@ import {
   Mail,
   Phone,
   Globe,
-  LinkedinIcon
+  LinkedinIcon,
+  Users as UsersIcon
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
@@ -208,7 +209,7 @@ const AlumniProfile = () => {
                   
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Users className="h-6 w-6 text-green-600" />
+                      <UsersIcon className="h-6 w-6 text-green-600" />
                     </div>
                     <div>
                       <p className="font-medium">Active Member</p>
