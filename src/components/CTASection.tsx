@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { GraduationCap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CTASection = () => {
   return (
@@ -20,8 +21,9 @@ const CTASection = () => {
         <Button 
           size="lg" 
           className="button-transition button-hover"
+          asChild
         >
-          Get Started
+          <Link to="/alumni-portal">Alumni Portal</Link>
         </Button>
         
         <div className="mt-12 grid grid-cols-3 gap-6">
