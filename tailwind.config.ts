@@ -99,6 +99,10 @@ export default {
 				'spin-slow': {
 					from: { transform: 'rotate(0deg)' },
 					to: { transform: 'rotate(360deg)' }
+				},
+				'background-pan': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'100%': { backgroundPosition: '100% 50%' }
 				}
 			},
 			animation: {
@@ -111,7 +115,8 @@ export default {
 				'slide-in': 'slide-in 0.5s ease-out',
 				'float': 'float 6s ease-in-out infinite',
 				'pulse-subtle': 'pulse-subtle 3s infinite',
-				'spin-slow': 'spin-slow 8s linear infinite'
+				'spin-slow': 'spin-slow 8s linear infinite',
+				'background-pan': 'background-pan 3s ease infinite'
 			},
 			fontFamily: {
 				sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],

@@ -101,6 +101,21 @@
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
   }
+  
+  .background-animate {
+    background-size: 200% 200%;
+    animation: gradient-x 5s ease infinite;
+  }
+}
+
+/* Custom animations */
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Custom scroll bar */
