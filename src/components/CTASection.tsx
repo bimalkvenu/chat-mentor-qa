@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { GraduationCap } from 'lucide-react';
+import { GraduationCap, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const CTASection = () => {
@@ -19,13 +19,27 @@ const CTASection = () => {
           Access your personalized alumni profile and dashboard.
         </p>
         
-        <Button 
-          size="lg" 
-          className="button-transition button-hover"
-          asChild
-        >
-          <Link to="/alumni-portal">Alumni Portal</Link>
-        </Button>
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+          <Button 
+            size="lg" 
+            className="button-transition button-hover"
+            asChild
+          >
+            <Link to="/alumni-portal">Alumni Portal</Link>
+          </Button>
+          
+          <Button 
+            size="lg" 
+            variant="outline"
+            className="button-transition button-hover flex gap-2"
+            asChild
+          >
+            <Link to="/ai-chat">
+              <MessageCircle className="h-5 w-5" />
+              Chat with AI Assistant
+            </Link>
+          </Button>
+        </div>
         
         <div className="mt-12 grid grid-cols-3 gap-6">
           <div className="glass-card rounded-xl p-4 text-center">

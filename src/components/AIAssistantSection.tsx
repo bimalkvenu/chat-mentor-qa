@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Book, Search, MessageCircle, Calendar, BrainCircuit } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const AIAssistantSection = () => {
   const [activeMessage, setActiveMessage] = useState(0);
@@ -145,8 +146,11 @@ const AIAssistantSection = () => {
             </div>
             
             <div className="pt-6">
-              <Button className="button-transition button-hover focus-ring">
-                Try the AI Assistant
+              <Button 
+                className="button-transition button-hover focus-ring"
+                asChild
+              >
+                <Link to="/ai-chat">Try the AI Assistant</Link>
               </Button>
             </div>
           </div>
