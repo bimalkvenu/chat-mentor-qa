@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Book, Search, MessageCircle, Calendar, BrainCircuit } from 'lucide-react';
+import { Book, Search, MessageCircle, Calendar, BrainCircuit, Sparkles, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -147,10 +147,15 @@ const AIAssistantSection = () => {
             
             <div className="pt-6">
               <Button 
-                className="button-transition button-hover focus-ring"
+                className="button-transition button-hover focus-ring relative overflow-hidden group bg-gradient-to-r from-primary to-blue-600"
                 asChild
               >
-                <Link to="/ai-chat">Try the AI Assistant</Link>
+                <Link to="/ai-chat" className="flex items-center gap-2">
+                  <span className="absolute -top-10 -left-10 w-20 h-20 bg-white/20 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-500 ease-out"></span>
+                  <BrainCircuit className="h-5 w-5 text-white" />
+                  <span>Try the AI Assistant</span>
+                  <Sparkles className="h-4 w-4 text-yellow-300" />
+                </Link>
               </Button>
             </div>
           </div>
