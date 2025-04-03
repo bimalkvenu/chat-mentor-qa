@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import NavigationBar from '@/components/NavigationBar';
@@ -602,4 +603,28 @@ const AIChat = () => {
                     <div className="mb-4 relative">
                       <div className="flex space-x-1">
                         {[...Array(5)].map((_, i) => (
-                          <Sparkles
+                          <Sparkles key={i} className="h-4 w-4 text-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <p className="text-sm mb-4 flex-grow">"{testimonial.quote}"</p>
+                    
+                    <div>
+                      <p className="font-medium">{testimonial.author}</p>
+                      <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default AIChat;
