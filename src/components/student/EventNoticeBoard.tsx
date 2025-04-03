@@ -37,10 +37,10 @@ const EventNoticeBoard = () => {
 
   return (
     <div className="space-y-6">
-      <Card className="glass-card p-6 rounded-xl animate-fade-in">
+      <Card className="glass-card p-6 rounded-xl animate-fade-in bg-gradient-to-br from-white via-phthalo-light/30 to-white">
         <CardHeader className="px-0 pt-0">
           <CardTitle className="text-xl font-semibold flex items-center gap-2">
-            <Calendar className="h-5 w-5 text-primary" />
+            <Calendar className="h-5 w-5 text-phthalo" />
             Upcoming Events
           </CardTitle>
         </CardHeader>
@@ -49,33 +49,33 @@ const EventNoticeBoard = () => {
             {events.map(event => (
               <div 
                 key={event.id} 
-                className="border rounded-lg p-4 hover:border-primary/30 transition-colors cursor-pointer animate-fade-in glass-card"
+                className="border rounded-lg p-4 hover:border-phthalo/30 transition-colors cursor-pointer animate-fade-in bg-gradient-to-br from-white to-phthalo-light/30 shadow-soft"
               >
                 <div className="flex justify-between items-start">
                   <div>
-                    <h3 className="font-semibold text-lg mb-2">{event.title}</h3>
+                    <h3 className="font-semibold text-lg mb-2 text-phthalo-dark">{event.title}</h3>
                     <p className="text-sm text-muted-foreground mb-3">{event.description}</p>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
                       <div className="flex items-center gap-2">
-                        <Calendar className="h-4 w-4 text-primary" />
+                        <Calendar className="h-4 w-4 text-phthalo" />
                         <span>{event.date}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Clock className="h-4 w-4 text-primary" />
+                        <Clock className="h-4 w-4 text-phthalo" />
                         <span>{event.time}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <MapPin className="h-4 w-4 text-primary" />
+                        <MapPin className="h-4 w-4 text-phthalo" />
                         <span>{event.location}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Users className="h-4 w-4 text-primary" />
+                        <Users className="h-4 w-4 text-phthalo" />
                         <span>{event.attendees} attending</span>
                       </div>
                     </div>
                   </div>
-                  <Button size="sm" className="button-transition button-hover focus-ring">
+                  <Button size="sm" className="button-transition button-hover focus-ring bg-phthalo hover:bg-phthalo-dark">
                     RSVP
                   </Button>
                 </div>

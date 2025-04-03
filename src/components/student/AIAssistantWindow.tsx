@@ -38,7 +38,7 @@ const AIAssistantWindow = () => {
       }]);
       
       toast.success("Your AI assistant has responded", {
-        icon: <Sparkles className="h-4 w-4 text-yellow-500" />
+        icon: <Sparkles className="h-4 w-4 text-phthalo-medium" />
       });
       
       scrollToBottom();
@@ -67,17 +67,17 @@ const AIAssistantWindow = () => {
   ];
 
   return (
-    <Card className="glass-card rounded-xl overflow-hidden animate-fade-in">
-      <CardHeader className="px-6 pt-6 pb-3">
+    <Card className="glass-card rounded-xl overflow-hidden animate-fade-in bg-gradient-to-br from-white via-phthalo-light/30 to-white">
+      <CardHeader className="px-6 pt-6 pb-3 bg-gradient-to-r from-phthalo-light/50 to-white">
         <CardTitle className="text-xl font-semibold flex items-center gap-2">
-          <Bot className="h-5 w-5 text-primary" />
+          <Bot className="h-5 w-5 text-phthalo" />
           AI Study Assistant
         </CardTitle>
       </CardHeader>
       
       <CardContent className="p-0">
         {/* Chat area */}
-        <div className="h-[400px] overflow-y-auto p-6 space-y-4 bg-slate-50/50">
+        <div className="h-[400px] overflow-y-auto p-6 space-y-4 bg-phthalo-light/20">
           {messages.map(message => (
             <div 
               key={message.id}
@@ -86,8 +86,8 @@ const AIAssistantWindow = () => {
               <div 
                 className={`max-w-[80%] p-3 rounded-lg ${
                   message.isBot 
-                    ? 'bg-white border border-slate-200 rounded-tl-none' 
-                    : 'bg-primary text-white rounded-tr-none'
+                    ? 'bg-white border border-phthalo-light/50 rounded-tl-none' 
+                    : 'bg-phthalo text-white rounded-tr-none'
                 }`}
               >
                 {message.text}
@@ -97,11 +97,11 @@ const AIAssistantWindow = () => {
           
           {isTyping && (
             <div className="flex justify-start animate-fade-in">
-              <div className="bg-white border border-slate-200 p-3 rounded-lg rounded-tl-none">
+              <div className="bg-white border border-phthalo-light/50 p-3 rounded-lg rounded-tl-none">
                 <div className="flex space-x-2">
-                  <div className="w-2 h-2 rounded-full bg-slate-300 animate-bounce"></div>
-                  <div className="w-2 h-2 rounded-full bg-slate-300 animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                  <div className="w-2 h-2 rounded-full bg-slate-300 animate-bounce" style={{ animationDelay: '0.4s' }}></div>
+                  <div className="w-2 h-2 rounded-full bg-phthalo-medium animate-bounce"></div>
+                  <div className="w-2 h-2 rounded-full bg-phthalo-medium animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                  <div className="w-2 h-2 rounded-full bg-phthalo-medium animate-bounce" style={{ animationDelay: '0.4s' }}></div>
                 </div>
               </div>
             </div>
@@ -111,9 +111,9 @@ const AIAssistantWindow = () => {
         </div>
         
         {/* Suggested questions */}
-        <div className="px-6 py-3 bg-slate-50 border-t border-slate-100">
-          <p className="text-sm font-medium text-muted-foreground mb-2 flex items-center gap-1">
-            <Lightbulb className="h-4 w-4 text-yellow-500" />
+        <div className="px-6 py-3 bg-phthalo-light/40 border-t border-phthalo-light/50">
+          <p className="text-sm font-medium text-phthalo-dark mb-2 flex items-center gap-1">
+            <Lightbulb className="h-4 w-4 text-phthalo-medium" />
             Ask me about:
           </p>
           <div className="flex flex-wrap gap-2">
@@ -121,7 +121,7 @@ const AIAssistantWindow = () => {
               <button
                 key={index}
                 onClick={() => setInput(question)}
-                className="text-xs px-3 py-1 bg-white border border-slate-200 rounded-full hover:border-primary/50 hover:bg-slate-50 transition-colors"
+                className="text-xs px-3 py-1 bg-white border border-phthalo-light rounded-full hover:border-phthalo hover:bg-phthalo-light/30 transition-colors"
               >
                 {question}
               </button>
@@ -130,13 +130,13 @@ const AIAssistantWindow = () => {
         </div>
         
         {/* Input area */}
-        <div className="p-4 border-t border-slate-200">
+        <div className="p-4 border-t border-phthalo-light/50 bg-gradient-to-b from-white to-phthalo-light/20">
           <div className="relative">
             <Textarea
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask your AI assistant..."
-              className="min-h-[60px] pr-14 resize-none"
+              className="min-h-[60px] pr-14 resize-none bg-white/80 border-phthalo-light/50"
               onKeyDown={(e) => {
                 if (e.key === 'Enter' && !e.shiftKey) {
                   e.preventDefault();
@@ -147,7 +147,7 @@ const AIAssistantWindow = () => {
             <Button
               onClick={handleSendMessage}
               size="icon"
-              className="absolute right-2 bottom-2 rounded-full"
+              className="absolute right-2 bottom-2 rounded-full bg-phthalo hover:bg-phthalo-dark"
               disabled={!input.trim() || isTyping}
             >
               <ArrowUp className="h-4 w-4" />
