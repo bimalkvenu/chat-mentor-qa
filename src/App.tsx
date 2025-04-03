@@ -10,6 +10,7 @@ import AlumniPortal from "./pages/AlumniPortal";
 import AlumniProfile from "./pages/AlumniProfile";
 import AIChat from "./pages/AIChat";
 import StudentDashboard from "./pages/StudentDashboard";
+import Events from "./pages/Events";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/alumni-profile" element={<AlumniProfile />} />
           <Route path="/ai-chat" element={<AIChat />} />
           <Route path="/student-dashboard" element={<StudentDashboard />} />
+          <Route path="/events" element={<Events />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
