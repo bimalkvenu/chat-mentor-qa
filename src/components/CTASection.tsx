@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 
 const CTASection = () => {
   return (
-    <section className="py-20 px-4 md:px-6 relative overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-20 px-4 md:px-6 relative overflow-hidden bg-gradient-to-b from-phthalo-light/50 to-white">
       <div className="container mx-auto text-center max-w-2xl">
-        <GraduationCap className="h-12 w-12 text-primary mx-auto mb-6" />
+        <GraduationCap className="h-12 w-12 text-phthalo mx-auto mb-6" />
         
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
           Join Our Alumni Network
@@ -43,15 +43,15 @@ const CTASection = () => {
         
         <div className="mt-12 grid grid-cols-3 gap-6">
           <div className="glass-card rounded-xl p-4 text-center">
-            <div className="text-3xl font-bold text-primary mb-1">5K+</div>
+            <div className="text-3xl font-bold text-phthalo mb-1">5K+</div>
             <p className="text-sm text-muted-foreground">Alumni</p>
           </div>
           <div className="glass-card rounded-xl p-4 text-center">
-            <div className="text-3xl font-bold text-primary mb-1">500+</div>
+            <div className="text-3xl font-bold text-phthalo mb-1">500+</div>
             <p className="text-sm text-muted-foreground">Mentors</p>
           </div>
           <div className="glass-card rounded-xl p-4 text-center">
-            <div className="text-3xl font-bold text-primary mb-1">250+</div>
+            <div className="text-3xl font-bold text-phthalo mb-1">250+</div>
             <p className="text-sm text-muted-foreground">Events</p>
           </div>
         </div>

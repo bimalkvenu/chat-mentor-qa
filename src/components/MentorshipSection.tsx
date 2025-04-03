@@ -28,14 +28,14 @@ const MentorshipSection = () => {
   return (
     <section id="mentorship" className="py-24 px-4 md:px-6 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50 -z-10"></div>
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-100 rounded-full opacity-10 blur-3xl -z-10"></div>
-      <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-purple-100 rounded-full opacity-10 blur-3xl -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-phthalo-light/50 to-white/50 -z-10"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-phthalo-light rounded-full opacity-10 blur-3xl -z-10"></div>
+      <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-phthalo-light rounded-full opacity-10 blur-3xl -z-10"></div>
       
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6 max-w-xl animate-on-scroll">
-            <div className="inline-block px-3 py-1 text-sm font-medium bg-blue-100 text-blue-800 rounded-full">
+            <div className="inline-block px-3 py-1 text-sm font-medium bg-phthalo-light text-phthalo-dark rounded-full">
               Expert Guidance
             </div>
             <h2 className="text-3xl md:text-4xl font-bold">
@@ -54,7 +54,7 @@ const MentorshipSection = () => {
                 { icon: <Users className="h-5 w-5" />, text: "Build a professional network" }
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <div className="mr-3 mt-0.5 text-primary">{item.icon}</div>
+                  <div className="mr-3 mt-0.5 text-phthalo">{item.icon}</div>
                   <span>{item.text}</span>
                 </li>
               ))}
@@ -71,8 +71,8 @@ const MentorshipSection = () => {
           </div>
           
           <div className="relative animate-on-scroll">
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-100 rounded-full opacity-70 -z-10"></div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-100 rounded-full opacity-70 -z-10"></div>
+            <div className="absolute -top-6 -left-6 w-32 h-32 bg-phthalo-light rounded-full opacity-70 -z-10"></div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-phthalo-light rounded-full opacity-70 -z-10"></div>
             
             <div className="grid gap-6">
               {mentors.map((mentor, index) => (
@@ -96,7 +96,7 @@ const MentorshipSection = () => {
                         {mentor.specialties.map((specialty, idx) => (
                           <span 
                             key={idx} 
-                            className="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-full"
+                            className="px-3 py-1 bg-phthalo-light text-phthalo-dark text-sm rounded-full"
                           >
                             {specialty}
                           </span>

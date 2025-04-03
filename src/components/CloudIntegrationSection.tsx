@@ -7,14 +7,14 @@ const CloudIntegrationSection = () => {
   return (
     <section className="py-24 px-4 md:px-6 relative overflow-hidden">
       {/* Background gradients */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-slate-50/50 -z-10"></div>
-      <div className="absolute -right-64 -top-64 w-[500px] h-[500px] bg-blue-200/20 rounded-full blur-3xl -z-10"></div>
-      <div className="absolute -left-64 -bottom-64 w-[500px] h-[500px] bg-purple-200/20 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-phthalo-light/50 to-white/50 -z-10"></div>
+      <div className="absolute -right-64 -top-64 w-[500px] h-[500px] bg-phthalo-light/20 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute -left-64 -bottom-64 w-[500px] h-[500px] bg-phthalo-light/20 rounded-full blur-3xl -z-10"></div>
       
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6 max-w-xl animate-on-scroll">
-            <div className="inline-block px-3 py-1 text-sm font-medium bg-blue-100 text-blue-800 rounded-full">
+            <div className="inline-block px-3 py-1 text-sm font-medium bg-phthalo-light text-phthalo-dark rounded-full">
               Powered by Microsoft Azure
             </div>
             <h2 className="text-3xl md:text-4xl font-bold">
@@ -49,7 +49,7 @@ const CloudIntegrationSection = () => {
                 }
               ].map((feature, index) => (
                 <div key={index} className="flex">
-                  <div className="mr-4 mt-1 w-12 h-12 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600">
+                  <div className="mr-4 mt-1 w-12 h-12 rounded-lg bg-phthalo-light border border-phthalo-light/50 flex items-center justify-center text-phthalo">
                     {feature.icon}
                   </div>
                   <div>
@@ -72,16 +72,16 @@ const CloudIntegrationSection = () => {
           
           <div className="animate-on-scroll">
             <div className="relative mx-auto max-w-md">
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 rounded-3xl blur-2xl -z-10 transform rotate-6"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-phthalo/20 to-phthalo-medium/20 rounded-3xl blur-2xl -z-10 transform rotate-6"></div>
               
               <div className="glass-card rounded-2xl overflow-hidden shadow-strong relative">
-                <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-6 text-white">
+                <div className="bg-gradient-to-r from-phthalo to-phthalo-dark p-6 text-white">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
                       <Cloud className="h-8 w-8 mr-3" />
                       <div>
                         <h3 className="font-medium">Azure Cloud Services</h3>
-                        <p className="text-sm text-blue-100">Powering AlumniConnect</p>
+                        <p className="text-sm text-phthalo-light">Powering AlumniConnect</p>
                       </div>
                     </div>
                     <div className="h-3 w-3 rounded-full bg-green-400"></div>
@@ -89,7 +89,7 @@ const CloudIntegrationSection = () => {
                   
                   <div className="grid grid-cols-2 gap-3 text-sm">
                     <div className="bg-white/10 backdrop-blur-sm p-3 rounded-lg">
-                      <p className="text-blue-100">CPU Usage</p>
+                      <p className="text-phthalo-light">CPU Usage</p>
                       <div className="flex items-center justify-between">
                         <span className="font-medium">12%</span>
                         <div className="w-20 h-2 bg-white/20 rounded-full overflow-hidden">
@@ -98,7 +98,7 @@ const CloudIntegrationSection = () => {
                       </div>
                     </div>
                     <div className="bg-white/10 backdrop-blur-sm p-3 rounded-lg">
-                      <p className="text-blue-100">Memory</p>
+                      <p className="text-phthalo-light">Memory</p>
                       <div className="flex items-center justify-between">
                         <span className="font-medium">24%</span>
                         <div className="w-20 h-2 bg-white/20 rounded-full overflow-hidden">
@@ -136,7 +136,7 @@ const CloudIntegrationSection = () => {
                     <Button 
                       variant="ghost" 
                       size="sm" 
-                      className="text-blue-600 hover:text-blue-700 hover:bg-blue-50"
+                      className="text-phthalo hover:text-phthalo-dark hover:bg-phthalo-light"
                     >
                       Refresh
                     </Button>

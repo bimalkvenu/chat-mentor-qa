@@ -38,10 +38,10 @@ const events = [
 
 const EventsSection = () => {
   return (
-    <section id="events" className="py-24 px-4 md:px-6 bg-gradient-to-b from-slate-50 to-white">
+    <section id="events" className="py-24 px-4 md:px-6 bg-gradient-to-b from-phthalo-light/50 to-white">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
-          <div className="inline-block px-3 py-1 text-sm font-medium bg-blue-100 text-blue-800 rounded-full mb-4">
+          <div className="inline-block px-3 py-1 text-sm font-medium bg-phthalo-light text-phthalo-dark rounded-full mb-4">
             Connect & Grow
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -66,7 +66,7 @@ const EventsSection = () => {
                   alt={event.title}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
-                <div className="absolute top-3 right-3 px-3 py-1 text-xs font-medium bg-white/90 backdrop-blur-xs rounded-full text-primary">
+                <div className="absolute top-3 right-3 px-3 py-1 text-xs font-medium bg-white/90 backdrop-blur-xs rounded-full text-phthalo">
                   {event.type}
                 </div>
               </div>
@@ -79,19 +79,19 @@ const EventsSection = () => {
                 
                 <div className="mt-auto space-y-3 pt-4">
                   <div className="flex items-center">
-                    <Calendar className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
+                    <Calendar className="h-4 w-4 text-phthalo mr-2 flex-shrink-0" />
                     <span className="text-sm">{event.date}</span>
                   </div>
                   <div className="flex items-center">
-                    <Clock className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
+                    <Clock className="h-4 w-4 text-phthalo mr-2 flex-shrink-0" />
                     <span className="text-sm">{event.time}</span>
                   </div>
                   <div className="flex items-center">
-                    <MapPin className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
+                    <MapPin className="h-4 w-4 text-phthalo mr-2 flex-shrink-0" />
                     <span className="text-sm">{event.location}</span>
                   </div>
                   <div className="flex items-center">
-                    <Users className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
+                    <Users className="h-4 w-4 text-phthalo mr-2 flex-shrink-0" />
                     <span className="text-sm">{event.attendees} attending</span>
                   </div>
                 </div>
