@@ -11,13 +11,13 @@ const Events = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-phthalo-light via-white to-phthalo-light/50">
       <NavigationBar />
       
       <main className="flex-grow pt-24 pb-12">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-8">
-            <h1 className="text-3xl font-bold mb-2">Campus Events</h1>
+            <h1 className="text-3xl font-bold mb-2 text-phthalo">Campus Events</h1>
             <p className="text-muted-foreground">Stay updated with all the upcoming events and activities</p>
           </div>
           

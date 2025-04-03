@@ -53,6 +53,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Adding phthalo green custom colors
+				phthalo: {
+					DEFAULT: '#0F4C5C',
+					light: '#E4F0ED',
+					medium: '#5B9279',
+					dark: '#0A3640',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

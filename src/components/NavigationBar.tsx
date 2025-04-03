@@ -24,34 +24,34 @@ const NavigationBar = () => {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled 
-          ? 'bg-white/80 backdrop-blur-md border-b border-slate-200/50 py-3' 
+          ? 'bg-white/80 backdrop-blur-md border-b border-phthalo-light/50 py-3' 
           : 'bg-transparent py-5'
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <GraduationCap className="h-8 w-8 text-primary" />
-          <span className="font-semibold text-xl">AlumniConnect</span>
+          <GraduationCap className="h-8 w-8 text-phthalo" />
+          <span className="font-semibold text-xl text-phthalo">AlumniConnect</span>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <Link 
             to="/" 
-            className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1"
+            className="text-sm font-medium transition-colors hover:text-phthalo flex items-center gap-1"
           >
             <Home className="h-4 w-4" />
             Home
           </Link>
           <Link 
             to="/ai-chat" 
-            className="text-sm font-medium transition-colors hover:text-primary"
+            className="text-sm font-medium transition-colors hover:text-phthalo"
           >
             AI Assistant
           </Link>
           <Link 
             to="/events" 
-            className="text-sm font-medium transition-colors hover:text-primary"
+            className="text-sm font-medium transition-colors hover:text-phthalo"
           >
             Events
           </Link>
@@ -60,12 +60,12 @@ const NavigationBar = () => {
         <div className="hidden md:flex items-center space-x-4">
           <Button 
             variant="outline" 
-            className="button-transition button-hover focus-ring"
+            className="button-transition button-hover focus-ring border-phthalo-medium/50 text-phthalo hover:text-phthalo-dark"
           >
             Sign In
           </Button>
           <Button 
-            className="button-transition button-hover focus-ring"
+            className="button-transition button-hover focus-ring bg-phthalo hover:bg-phthalo-dark"
           >
             Join Now
           </Button>
@@ -77,20 +77,20 @@ const NavigationBar = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (
-            <X className="h-6 w-6" />
+            <X className="h-6 w-6 text-phthalo" />
           ) : (
-            <MenuIcon className="h-6 w-6" />
+            <MenuIcon className="h-6 w-6 text-phthalo" />
           )}
         </button>
       </div>
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-b border-slate-200/50 animate-fade-in">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-b border-phthalo-light/50 animate-fade-in">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <Link 
               to="/" 
-              className="py-2 text-base font-medium transition-colors hover:text-primary flex items-center gap-2"
+              className="py-2 text-base font-medium transition-colors hover:text-phthalo flex items-center gap-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <Home className="h-4 w-4" />
@@ -98,14 +98,14 @@ const NavigationBar = () => {
             </Link>
             <Link 
               to="/ai-chat" 
-              className="py-2 text-base font-medium transition-colors hover:text-primary"
+              className="py-2 text-base font-medium transition-colors hover:text-phthalo"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               AI Assistant
             </Link>
             <Link 
               to="/events" 
-              className="py-2 text-base font-medium transition-colors hover:text-primary"
+              className="py-2 text-base font-medium transition-colors hover:text-phthalo"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Events
@@ -113,12 +113,12 @@ const NavigationBar = () => {
             <div className="pt-2 flex flex-col space-y-3">
               <Button 
                 variant="outline"
-                className="w-full justify-center button-transition focus-ring"
+                className="w-full justify-center button-transition focus-ring border-phthalo-medium/50 text-phthalo hover:text-phthalo-dark"
               >
                 Sign In
               </Button>
               <Button 
-                className="w-full justify-center button-transition focus-ring"
+                className="w-full justify-center button-transition focus-ring bg-phthalo hover:bg-phthalo-dark"
               >
                 Join Now
               </Button>
